@@ -11,6 +11,14 @@ namespace Full_GRASP_And_SOLID
 {
     public class Recipe
     {
+         private List<Step> lineItems = new List<Step>();
+
+        public Step AddStep(Product input,double quantity, Equipment equipment ,int time)
+        {
+        Step stepline = new Step(input,quantity,equipment,time);
+        this.steps.Add(stepline);
+        return stepline;
+        }
         private IList<Step> steps = new List<Step>();
 
         public Product FinalProduct { get; set; }
